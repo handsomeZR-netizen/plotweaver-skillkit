@@ -1,0 +1,524 @@
+{
+  "article_count": 17,
+  "articles": [
+    {
+      "slug": "python-三维主成分分析-pca-三维散点投影图-f4261d90",
+      "title": "Python| 三维主成分分析(PCA)+三维散点投影图",
+      "url": "https://mp.weixin.qq.com/s/Hhd2x3ulCxAzHs6jcWyVaA",
+      "plot_types": [
+        "scatter",
+        "multi_panel"
+      ],
+      "libraries_detected": [
+        "matplotlib",
+        "pandas",
+        "numpy",
+        "sklearn"
+      ],
+      "palette_hex": [
+        "#BBBBBC",
+        "#A19EA2",
+        "#D5D8DA",
+        "#DAE0ED",
+        "#B4B2B5",
+        "#B8C7E3"
+      ],
+      "layout_pattern": "multi_panel",
+      "annotation_style": "heavy",
+      "confidence": 0.95,
+      "manual_review_required": false,
+      "validation_status": "not_validated",
+      "recommended_template": "multi_panel"
+    },
+    {
+      "slug": "python-主坐标分析-pcoa-边缘图-8种-c7c4ca03",
+      "title": "Python| 主坐标分析(PCoA) + 边缘图(8种)",
+      "url": "https://mp.weixin.qq.com/s/-Lbp7X47DVHceX6oV0aExw",
+      "plot_types": [
+        "bar",
+        "scatter",
+        "distribution"
+      ],
+      "libraries_detected": [
+        "matplotlib",
+        "pandas",
+        "numpy",
+        "scipy"
+      ],
+      "palette_hex": [
+        "#A89AA0",
+        "#ADB4DD",
+        "#BACBEA",
+        "#ECF2F8",
+        "#EADFE4",
+        "#C5D1E4"
+      ],
+      "layout_pattern": "multi_panel",
+      "annotation_style": "heavy",
+      "confidence": 0.95,
+      "manual_review_required": false,
+      "validation_status": "not_validated",
+      "recommended_template": "scatter"
+    },
+    {
+      "slug": "python-主成分分析-pca-8种类型边缘图-5a7c0c76",
+      "title": "Python| 主成分分析(PCA)+8种类型边缘图",
+      "url": "https://mp.weixin.qq.com/s/jpTRIpMEMWdzcPYq8qoCBA",
+      "plot_types": [
+        "scatter",
+        "distribution"
+      ],
+      "libraries_detected": [
+        "pandas",
+        "numpy"
+      ],
+      "palette_hex": [
+        "#928186",
+        "#F3E9F1",
+        "#E8E9F5",
+        "#C6DEEF",
+        "#E3CEDA",
+        "#C4BDE1"
+      ],
+      "layout_pattern": "multi_panel",
+      "annotation_style": "heavy",
+      "confidence": 0.95,
+      "manual_review_required": false,
+      "validation_status": "validated",
+      "recommended_template": "scatter"
+    },
+    {
+      "slug": "python-各轴刻度范围不同-多维度雷达图-8c91af45",
+      "title": "Python| 各轴刻度范围不同・多维度雷达图",
+      "url": "https://mp.weixin.qq.com/s/_8Hv1AxbqZBcQnxwbKw_UQ",
+      "plot_types": [
+        "bar"
+      ],
+      "libraries_detected": [
+        "matplotlib",
+        "pandas",
+        "numpy"
+      ],
+      "palette_hex": [
+        "#FBF6EE",
+        "#9B8A83",
+        "#E2D8D3",
+        "#E1DED5",
+        "#9D9C8C",
+        "#ADB4DD"
+      ],
+      "layout_pattern": "multi_panel",
+      "annotation_style": "heavy",
+      "confidence": 0.95,
+      "manual_review_required": false,
+      "validation_status": "not_validated",
+      "recommended_template": "bar"
+    },
+    {
+      "slug": "python-哑铃图-bf3fe09a",
+      "title": "Python| 哑铃图",
+      "url": "https://mp.weixin.qq.com/s/UUHe8N17m3mliWBjh94KIQ",
+      "plot_types": [
+        "line"
+      ],
+      "libraries_detected": [
+        "matplotlib",
+        "pandas",
+        "numpy"
+      ],
+      "palette_hex": [
+        "#FBEFF0",
+        "#FCFAF1",
+        "#BDD7CC",
+        "#DBCBD4",
+        "#FBEFEF",
+        "#FCF9EF"
+      ],
+      "layout_pattern": "multi_panel",
+      "annotation_style": "heavy",
+      "confidence": 0.95,
+      "manual_review_required": false,
+      "validation_status": "not_validated",
+      "recommended_template": "line"
+    },
+    {
+      "slug": "python-多分类混淆矩阵-726143a4",
+      "title": "Python| 多分类混淆矩阵",
+      "url": "https://mp.weixin.qq.com/s/UTDhMPT64Nn74ATvcO-gGg",
+      "plot_types": [
+        "line",
+        "multi_panel"
+      ],
+      "libraries_detected": [
+        "matplotlib",
+        "numpy"
+      ],
+      "palette_hex": [
+        "#AADD91",
+        "#E9F4EF",
+        "#9ED882",
+        "#A2DA87",
+        "#093B7B",
+        "#EEF8E8"
+      ],
+      "layout_pattern": "multi_panel",
+      "annotation_style": "heavy",
+      "confidence": 0.95,
+      "manual_review_required": false,
+      "validation_status": "not_validated",
+      "recommended_template": "multi_panel"
+    },
+    {
+      "slug": "python-多组别线性拟合-8种边缘图-进阶版-8ebf8de7",
+      "title": "Python| 多组别线性拟合+8种边缘图(进阶版)",
+      "url": "https://mp.weixin.qq.com/s/m3ZqSQqkgZQnONGy-2W04A",
+      "plot_types": [
+        "line",
+        "bar",
+        "scatter",
+        "distribution"
+      ],
+      "libraries_detected": [
+        "numpy"
+      ],
+      "palette_hex": [
+        "#BCC1CD",
+        "#C9DEEF",
+        "#B1BFC8",
+        "#FAE6E8",
+        "#DBB3C2",
+        "#D4C1D9"
+      ],
+      "layout_pattern": "multi_panel",
+      "annotation_style": "light",
+      "confidence": 0.95,
+      "manual_review_required": false,
+      "validation_status": "not_validated",
+      "recommended_template": "scatter"
+    },
+    {
+      "slug": "python-多组别线性拟合-置信区间-边缘分布-密度图-箱线图-3c9ea5c4",
+      "title": "Python| 多组别线性拟合+置信区间+边缘分布(密度图+箱线图)",
+      "url": "https://mp.weixin.qq.com/s/3Ty7eGbrRUmKp0t0HUxTcg",
+      "plot_types": [
+        "line",
+        "scatter",
+        "distribution"
+      ],
+      "libraries_detected": [
+        "matplotlib",
+        "pandas",
+        "numpy",
+        "scipy",
+        "sklearn"
+      ],
+      "palette_hex": [
+        "#C7D6DD",
+        "#FAE2E4",
+        "#F8EAED",
+        "#B7C3CC",
+        "#DCC8D9",
+        "#B3BFC6"
+      ],
+      "layout_pattern": "multi_panel",
+      "annotation_style": "heavy",
+      "confidence": 0.95,
+      "manual_review_required": false,
+      "validation_status": "not_validated",
+      "recommended_template": "scatter"
+    },
+    {
+      "slug": "python-左侧百分比堆积柱状图-右侧柱状图-组合图-2afeaff1",
+      "title": "Python| 左侧百分比堆积柱状图+右侧柱状图（组合图）",
+      "url": "https://mp.weixin.qq.com/s/t2GFQPOGxMGO1sqvT-VXzQ",
+      "plot_types": [
+        "bar",
+        "multi_panel"
+      ],
+      "libraries_detected": [
+        "matplotlib",
+        "pandas",
+        "numpy"
+      ],
+      "palette_hex": [
+        "#E2F4FD",
+        "#DFF5E1",
+        "#FFFFE8",
+        "#ADDECA",
+        "#99E2B0",
+        "#89C4D3"
+      ],
+      "layout_pattern": "multi_panel",
+      "annotation_style": "heavy",
+      "confidence": 0.95,
+      "manual_review_required": false,
+      "validation_status": "not_validated",
+      "recommended_template": "multi_panel"
+    },
+    {
+      "slug": "python-扇形混淆矩阵-含数量-百分比标注-颜色梯度映射-e817f78e",
+      "title": "Python|扇形混淆矩阵（含数量 / 百分比标注 + 颜色梯度映射）",
+      "url": "https://mp.weixin.qq.com/s/lYQy4jaGAu9OHHyr7dAeyA",
+      "plot_types": [
+        "multi_panel"
+      ],
+      "libraries_detected": [
+        "matplotlib",
+        "numpy"
+      ],
+      "palette_hex": [
+        "#A5B1C4",
+        "#F0ACB3",
+        "#2F4F7F",
+        "#EF949E",
+        "#EDE2E3",
+        "#4E4546"
+      ],
+      "layout_pattern": "multi_panel",
+      "annotation_style": "heavy",
+      "confidence": 0.95,
+      "manual_review_required": false,
+      "validation_status": "not_validated",
+      "recommended_template": "multi_panel"
+    },
+    {
+      "slug": "python-柱状图-散点配对连线图-显著性标记-配色灵感来自梵高作品-48b2105b",
+      "title": "Python| 柱状图+散点配对连线图+显著性标记 [配色灵感来自梵高作品]",
+      "url": "https://mp.weixin.qq.com/s/BB7aekhN7TgdMheyI1OeXA",
+      "plot_types": [
+        "line",
+        "bar",
+        "scatter",
+        "multi_panel"
+      ],
+      "libraries_detected": [
+        "matplotlib",
+        "pandas",
+        "numpy",
+        "scipy"
+      ],
+      "palette_hex": [
+        "#A8AE90",
+        "#88ACA9",
+        "#AEBEA7",
+        "#BED3C1",
+        "#8D9E8B",
+        "#807E5C"
+      ],
+      "layout_pattern": "multi_panel",
+      "annotation_style": "heavy",
+      "confidence": 0.95,
+      "manual_review_required": false,
+      "validation_status": "not_validated",
+      "recommended_template": "multi_panel"
+    },
+    {
+      "slug": "python-棒棒糖图-两种风格-6a23cb7e",
+      "title": "Python| 棒棒糖图+两种风格",
+      "url": "https://mp.weixin.qq.com/s/qUNvAk-DC89su37Cd8ngFQ",
+      "plot_types": [
+        "line",
+        "bar",
+        "scatter"
+      ],
+      "libraries_detected": [
+        "matplotlib",
+        "pandas",
+        "numpy"
+      ],
+      "palette_hex": [
+        "#E2F4FD",
+        "#E6F7FC",
+        "#DFF5E1",
+        "#FFFFE8",
+        "#FFFAF4",
+        "#939799"
+      ],
+      "layout_pattern": "multi_panel",
+      "annotation_style": "heavy",
+      "confidence": 0.95,
+      "manual_review_required": false,
+      "validation_status": "not_validated",
+      "recommended_template": "scatter"
+    },
+    {
+      "slug": "python-用pycirclize库绘制环形柱状图-e6b97843",
+      "title": "Python| 用pycirclize库绘制环形柱状图",
+      "url": "https://mp.weixin.qq.com/s/KqZyVhE8Uci3wpsHyIpNcQ",
+      "plot_types": [
+        "bar"
+      ],
+      "libraries_detected": [
+        "matplotlib",
+        "numpy"
+      ],
+      "palette_hex": [
+        "#6D6991",
+        "#CBD5DA",
+        "#8A6C77",
+        "#F1F8FC",
+        "#B0AFC1",
+        "#BEB1B6"
+      ],
+      "layout_pattern": "multi_panel",
+      "annotation_style": "heavy",
+      "confidence": 0.95,
+      "manual_review_required": false,
+      "validation_status": "not_validated",
+      "recommended_template": "bar"
+    },
+    {
+      "slug": "python-蝴蝶图-半小提琴图-含箱线-抖动散点-两种风格-795b025e",
+      "title": "Python| 蝴蝶图+半小提琴图(含箱线、抖动散点)+两种风格",
+      "url": "https://mp.weixin.qq.com/s/2ammO5O2ks173vWMUUeGhw",
+      "plot_types": [
+        "line",
+        "bar",
+        "scatter",
+        "distribution"
+      ],
+      "libraries_detected": [
+        "matplotlib",
+        "pandas",
+        "numpy"
+      ],
+      "palette_hex": [
+        "#FFFAF4",
+        "#E5F6FC",
+        "#E4F6FC",
+        "#B7BBBC",
+        "#B6BABB",
+        "#B3B6B7"
+      ],
+      "layout_pattern": "multi_panel",
+      "annotation_style": "heavy",
+      "confidence": 0.95,
+      "manual_review_required": false,
+      "validation_status": "validated",
+      "recommended_template": "scatter"
+    },
+    {
+      "slug": "python-蝴蝶图-小提琴图含箱线-两种风格-1f2e393b",
+      "title": "Python| 蝴蝶图+小提琴图含箱线)+两种风格",
+      "url": "https://mp.weixin.qq.com/s/J6z1FVBU5elp99KSQRBFeA",
+      "plot_types": [
+        "bar",
+        "scatter",
+        "distribution"
+      ],
+      "libraries_detected": [
+        "matplotlib",
+        "pandas",
+        "numpy"
+      ],
+      "palette_hex": [
+        "#FFFAF4",
+        "#E6F6FC",
+        "#BABEBF",
+        "#B9BDBD",
+        "#E4F6FC",
+        "#ADB4DD"
+      ],
+      "layout_pattern": "multi_panel",
+      "annotation_style": "heavy",
+      "confidence": 0.95,
+      "manual_review_required": false,
+      "validation_status": "not_validated",
+      "recommended_template": "scatter"
+    },
+    {
+      "slug": "python-边缘分布图优化-f2a92829",
+      "title": "Python| 边缘分布图优化",
+      "url": "https://mp.weixin.qq.com/s/18KE81xOFf9-a1vkZwauLw",
+      "plot_types": [
+        "line",
+        "bar",
+        "scatter",
+        "distribution"
+      ],
+      "libraries_detected": [
+        "numpy"
+      ],
+      "palette_hex": [
+        "#ADB4DD",
+        "#9D9FAD",
+        "#B5BFCA",
+        "#BACBEA",
+        "#9A9DA6",
+        "#CEC6E5"
+      ],
+      "layout_pattern": "multi_panel",
+      "annotation_style": "light",
+      "confidence": 0.95,
+      "manual_review_required": false,
+      "validation_status": "not_validated",
+      "recommended_template": "scatter"
+    },
+    {
+      "slug": "python-雷达图-73d98b2b",
+      "title": "Python| 雷达图",
+      "url": "https://mp.weixin.qq.com/s/WmpRthGpAeuD6YEdBB6PZQ",
+      "plot_types": [
+        "line",
+        "bar",
+        "scatter",
+        "multi_panel"
+      ],
+      "libraries_detected": [
+        "matplotlib",
+        "pandas",
+        "numpy"
+      ],
+      "palette_hex": [
+        "#A3969F",
+        "#EFDFE7",
+        "#EFF7FB",
+        "#D2D8E4",
+        "#FBEEEF",
+        "#E7EEF4"
+      ],
+      "layout_pattern": "multi_panel",
+      "annotation_style": "heavy",
+      "confidence": 0.95,
+      "manual_review_required": false,
+      "validation_status": "not_validated",
+      "recommended_template": "multi_panel"
+    }
+  ],
+  "aggregate": {
+    "plot_type_counts": {
+      "scatter": 11,
+      "multi_panel": 6,
+      "bar": 11,
+      "distribution": 7,
+      "line": 9
+    },
+    "library_counts": {
+      "matplotlib": 14,
+      "pandas": 12,
+      "numpy": 17,
+      "sklearn": 2,
+      "scipy": 3
+    },
+    "template_counts": {
+      "multi_panel": 6,
+      "scatter": 8,
+      "bar": 2,
+      "line": 1
+    },
+    "palette_hex_top": [
+      "#ADB4DD",
+      "#FFFAF4",
+      "#BACBEA",
+      "#E2F4FD",
+      "#DFF5E1",
+      "#FFFFE8",
+      "#E4F6FC",
+      "#BBBBBC",
+      "#A19EA2",
+      "#D5D8DA"
+    ],
+    "dominant_template": "scatter",
+    "validated_count": 2
+  }
+}

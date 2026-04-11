@@ -1,0 +1,50 @@
+<svg width="1600" height="720" viewBox="0 0 1600 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="32" y1="24" x2="1548" y2="696" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#081229"/>
+      <stop offset="0.45" stop-color="#112A46"/>
+      <stop offset="1" stop-color="#0C6A69"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#F3F7FA" stop-opacity="0.16"/>
+      <stop offset="1" stop-color="#F3F7FA" stop-opacity="0.04"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="220" y1="148" x2="1140" y2="560" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#8BE3FF"/>
+      <stop offset="0.5" stop-color="#E8F3B2"/>
+      <stop offset="1" stop-color="#F7B6C5"/>
+    </linearGradient>
+  </defs>
+  <rect x="0" y="0" width="1600" height="720" rx="32" fill="url(#bg)"/>
+  <circle cx="1330" cy="118" r="150" fill="#8BE3FF" fill-opacity="0.12"/>
+  <circle cx="1452" cy="540" r="198" fill="#F7B6C5" fill-opacity="0.1"/>
+  <circle cx="192" cy="590" r="168" fill="#E8F3B2" fill-opacity="0.08"/>
+  <path d="M128 578C304 470 492 542 646 482C842 406 996 220 1240 252C1356 266 1451 334 1520 396" stroke="url(#accent)" stroke-width="10" stroke-linecap="round"/>
+  <path d="M128 618C316 578 444 630 612 590C810 542 960 388 1192 404C1310 412 1425 474 1520 546" stroke="#D7E6EE" stroke-opacity="0.45" stroke-width="4" stroke-linecap="round" stroke-dasharray="10 14"/>
+  <rect x="84" y="78" width="1110" height="284" rx="30" fill="url(#card)" stroke="#D5E1E8" stroke-opacity="0.28"/>
+  <text x="124" y="158" fill="#D8E6EC" font-family="Segoe UI, Arial, sans-serif" font-size="28" letter-spacing="4">CODEX-READY PLOT EXTRACTION AND REUSE SYSTEM</text>
+  <text x="124" y="246" fill="#F7FBFD" font-family="Georgia, Times New Roman, serif" font-size="84" font-weight="700">PlotWeaver SkillKit</text>
+  <text x="124" y="312" fill="#D8E6EC" font-family="Segoe UI, Arial, sans-serif" font-size="34">Turn WeChat article plots into reusable paper-figure style assets.</text>
+  <rect x="1226" y="92" width="292" height="220" rx="26" fill="url(#card)" stroke="#D5E1E8" stroke-opacity="0.28"/>
+  <text x="1262" y="150" fill="#F7FBFD" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700">Workflow</text>
+  <text x="1262" y="194" fill="#D8E6EC" font-family="Segoe UI, Arial, sans-serif" font-size="22">1. Harvest signals</text>
+  <text x="1262" y="230" fill="#D8E6EC" font-family="Segoe UI, Arial, sans-serif" font-size="22">2. Weave style index</text>
+  <text x="1262" y="266" fill="#D8E6EC" font-family="Segoe UI, Arial, sans-serif" font-size="22">3. Validate capture</text>
+  <text x="1262" y="302" fill="#D8E6EC" font-family="Segoe UI, Arial, sans-serif" font-size="22">4. Handoff to project B</text>
+  <rect x="84" y="410" width="344" height="188" rx="24" fill="url(#card)" stroke="#D5E1E8" stroke-opacity="0.24"/>
+  <rect x="458" y="410" width="344" height="188" rx="24" fill="url(#card)" stroke="#D5E1E8" stroke-opacity="0.24"/>
+  <rect x="832" y="410" width="344" height="188" rx="24" fill="url(#card)" stroke="#D5E1E8" stroke-opacity="0.24"/>
+  <rect x="1206" y="410" width="310" height="188" rx="24" fill="url(#card)" stroke="#D5E1E8" stroke-opacity="0.24"/>
+  <text x="114" y="472" fill="#F7FBFD" font-family="Segoe UI, Arial, sans-serif" font-size="26" font-weight="700">Signal Harvester</text>
+  <text x="114" y="516" fill="#D8E6EC" font-family="Segoe UI, Arial, sans-serif" font-size="22">HTML, text, images, code snippets,</text>
+  <text x="114" y="548" fill="#D8E6EC" font-family="Segoe UI, Arial, sans-serif" font-size="22">and OCR fallback collection.</text>
+  <text x="488" y="472" fill="#F7FBFD" font-family="Segoe UI, Arial, sans-serif" font-size="26" font-weight="700">Style Loom</text>
+  <text x="488" y="516" fill="#D8E6EC" font-family="Segoe UI, Arial, sans-serif" font-size="22">Profiles, index, template registry,</text>
+  <text x="488" y="548" fill="#D8E6EC" font-family="Segoe UI, Arial, sans-serif" font-size="22">and reuse playbook generation.</text>
+  <text x="862" y="472" fill="#F7FBFD" font-family="Segoe UI, Arial, sans-serif" font-size="26" font-weight="700">Proof Capture</text>
+  <text x="862" y="516" fill="#D8E6EC" font-family="Segoe UI, Arial, sans-serif" font-size="22">Browser validation and missing</text>
+  <text x="862" y="548" fill="#D8E6EC" font-family="Segoe UI, Arial, sans-serif" font-size="22">report surfacing for risky runs.</text>
+  <text x="1236" y="472" fill="#F7FBFD" font-family="Segoe UI, Arial, sans-serif" font-size="26" font-weight="700">Project-B Handoff</text>
+  <text x="1236" y="516" fill="#D8E6EC" font-family="Segoe UI, Arial, sans-serif" font-size="22">Starter scripts and clear rules</text>
+  <text x="1236" y="548" fill="#D8E6EC" font-family="Segoe UI, Arial, sans-serif" font-size="22">for downstream Codex reuse.</text>
+</svg>

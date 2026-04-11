@@ -1,0 +1,38 @@
+{
+  "records": [
+    {
+      "slug": "python-蝴蝶图-半小提琴图-含箱线-抖动散点-两种风格-795b025e",
+      "url": "https://mp.weixin.qq.com/s/2ammO5O2ks173vWMUUeGhw",
+      "status": "validated",
+      "sampled_reason": "risk_based",
+      "screenshot_paths": [
+        "runs/demo_real2/validation/python-蝴蝶图-半小提琴图-含箱线-抖动散点-两种风格-795b025e/page_full.png"
+      ],
+      "dom_image_count": 14,
+      "extracted_image_count": 14,
+      "dom_code_candidates": 10,
+      "extracted_code_count": 38,
+      "missing_items": [],
+      "notes": [
+        "No obvious mismatch detected in this sampled browser validation."
+      ]
+    },
+    {
+      "slug": "python-主成分分析-pca-8种类型边缘图-5a7c0c76",
+      "url": "https://mp.weixin.qq.com/s/jpTRIpMEMWdzcPYq8qoCBA",
+      "status": "validated",
+      "sampled_reason": "risk_based",
+      "screenshot_paths": [
+        "runs/demo_real2/validation/python-主成分分析-pca-8种类型边缘图-5a7c0c76/page_full.png"
+      ],
+      "dom_image_count": 11,
+      "extracted_image_count": 11,
+      "dom_code_candidates": 10,
+      "extracted_code_count": 18,
+      "missing_items": [],
+      "notes": [
+        "No obvious mismatch detected in this sampled browser validation."
+      ]
+    }
+  ]
+}

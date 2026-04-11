@@ -1,0 +1,28 @@
+{
+  "plot_types": [
+    "line",
+    "bar",
+    "scatter",
+    "multi_panel"
+  ],
+  "libraries_detected": [
+    "matplotlib",
+    "pandas",
+    "numpy"
+  ],
+  "palette_hex": [
+    "#A3969F",
+    "#EFDFE7",
+    "#EFF7FB",
+    "#D2D8E4",
+    "#FBEEEF",
+    "#E7EEF4"
+  ],
+  "layout_pattern": "multi_panel",
+  "annotation_style": "heavy",
+  "typography": "serif",
+  "confidence": 0.95,
+  "recommended_template": "multi_panel",
+  "manual_review_required": false,
+  "notes": []
+}

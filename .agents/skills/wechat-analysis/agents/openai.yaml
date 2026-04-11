@@ -1,0 +1,6 @@
+interface:
+  display_name: "Signal Harvester"
+  short_description: "Analyze WeChat article batches into reusable style datasets"
+  default_prompt: "Use $wechat-analysis to analyze a Markdown list of WeChat article links and produce a reusable style dataset with validation-ready outputs."
+policy:
+  allow_implicit_invocation: false

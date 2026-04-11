@@ -1,0 +1,6 @@
+interface:
+  display_name: "Style Loom"
+  short_description: "Turn extracted style indexes into reusable starter plots"
+  default_prompt: "Use $plot-style-reuse to read an extracted style index, choose the best starter template, and generate publication-style plotting code."
+policy:
+  allow_implicit_invocation: true

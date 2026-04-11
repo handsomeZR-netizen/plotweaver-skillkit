@@ -1,0 +1,63 @@
+{
+  "theme_entrypoint": "style_kit/theme.py",
+  "templates": [
+    {
+      "template": "line",
+      "path": "templates/line_template.py",
+      "annotated_path": "templates/line_template.py",
+      "fits": [
+        "line",
+        "trend",
+        "time_series"
+      ]
+    },
+    {
+      "template": "bar",
+      "path": "templates/bar_template.py",
+      "annotated_path": "templates/bar_template.py",
+      "fits": [
+        "bar",
+        "grouped_comparison"
+      ]
+    },
+    {
+      "template": "scatter",
+      "path": "templates/scatter_template.py",
+      "annotated_path": "templates/scatter_template.py",
+      "fits": [
+        "scatter",
+        "correlation"
+      ]
+    },
+    {
+      "template": "heatmap",
+      "path": "templates/heatmap_template.py",
+      "annotated_path": "templates/heatmap_template.py",
+      "fits": [
+        "heatmap",
+        "matrix"
+      ]
+    },
+    {
+      "template": "distribution",
+      "path": "templates/distribution_template.py",
+      "annotated_path": "templates/distribution_template.py",
+      "fits": [
+        "distribution",
+        "histogram",
+        "density",
+        "violin",
+        "boxplot"
+      ]
+    },
+    {
+      "template": "multi_panel",
+      "path": "templates/multi_panel_template.py",
+      "annotated_path": "templates/multi_panel_template.py",
+      "fits": [
+        "multi_panel",
+        "subplot"
+      ]
+    }
+  ]
+}

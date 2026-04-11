@@ -1,0 +1,30 @@
+# Local notes and private source lists
+第一次链接.md
+需求.md
+
+# Legacy local workspace dump
+artifact_pack/
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Runtime outputs
+runs/
+exports/
+outputs/
+
+# OS / editors
+.DS_Store
+Thumbs.db

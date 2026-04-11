@@ -1,0 +1,277 @@
+{
+  "slug": "python-雷达图-73d98b2b",
+  "url": "https://mp.weixin.qq.com/s/WmpRthGpAeuD6YEdBB6PZQ",
+  "title": "Python| 雷达图",
+  "fetch_status": "success",
+  "body_text_excerpt": "未经授权不得转载或抄袭。 转载合作请后台联系授权，侵权必究。 雷达图能让 “哪个维度强、哪个维度弱” 一目了然，视觉冲击力拉满～ 01 环境准备与数据读取 import matplotlib.pyplot as plt import numpy as np import matplotlib.patches as mpatches import pandas as pd # 从CSV文件读取数据 df = pd.read_csv( 'data.csv' , index_col= 'Category' ) categories = df.index.tolist() group_names = df.columns.tolist() ",
+  "html_path": "runs/demo_real2/articles/python-雷达图-73d98b2b/raw/article.html",
+  "text_path": "runs/demo_real2/articles/python-雷达图-73d98b2b/raw/article.txt",
+  "body_html_path": "runs/demo_real2/articles/python-雷达图-73d98b2b/raw/body.html",
+  "author": "数汀笔记",
+  "images": [
+    {
+      "name": "image_001.png",
+      "url": "https://mmbiz.qpic.cn/sz_mmbiz_png/uHfI4YEvCPvuufggbibNut9z8icSFtA4Z2x31Tcsl5efdjkkYGUZOtZnopibQzcYzzBBJzQIOC2WcbYhwtxKDK9MQ/640?wx_fmt=png&from=appmsg",
+      "kind": "image",
+      "local_path": "runs/demo_real2/articles/python-雷达图-73d98b2b/assets/images/image_001.png",
+      "width": 1080,
+      "height": 608,
+      "sha1": "56a8724522ec7aae60291ec62b6a1e44ce88e116"
+    }
+  ],
+  "code_snippets": [
+    {
+      "snippet_id": "snippet_001",
+      "source": "html_code_block",
+      "text": "import\nmatplotlib.pyplot\nas\nplt\nimport\nnumpy\nas\nnp\nimport\nmatplotlib.patches\nas\nmpatches\nimport\npandas\nas\npd\n# 从CSV文件读取数据\ndf = pd.read_csv(\n'data.csv'\n, index_col=\n'Category'\n)\ncategories = df.index.tolist()\ngroup_names = df.columns.tolist()\ndata_sets = {col: df[col].tolist()\nfor\ncol\nin\ngroup_names}",
+      "language": "python",
+      "confidence": 0.7,
+      "local_path": "runs/demo_real2/articles/python-雷达图-73d98b2b/assets/code/snippet_001.py"
+    },
+    {
+      "snippet_id": "snippet_002",
+      "source": "html_code_block",
+      "text": "import\nmatplotlib.pyplot\nas\nplt",
+      "language": "python",
+      "confidence": 0.7,
+      "local_path": "runs/demo_real2/articles/python-雷达图-73d98b2b/assets/code/snippet_002.py"
+    },
+    {
+      "snippet_id": "snippet_003",
+      "source": "html_code_block",
+      "text": "import\nmatplotlib.patches\nas\nmpatches",
+      "language": "python",
+      "confidence": 0.7,
+      "local_path": "runs/demo_real2/articles/python-雷达图-73d98b2b/assets/code/snippet_003.py"
+    },
+    {
+      "snippet_id": "snippet_004",
+      "source": "html_code_block",
+      "text": "df = pd.read_csv(\n'data.csv'\n, index_col=\n'Category'\n)",
+      "language": "python",
+      "confidence": 0.7,
+      "local_path": "runs/demo_real2/articles/python-雷达图-73d98b2b/assets/code/snippet_004.py"
+    },
+    {
+      "snippet_id": "snippet_005",
+      "source": "html_code_block",
+      "text": "fig\n, ax = plt.subplots(figsize=(\n5\n,\n5\n), subplot_kw=dict(polar=True))\n# 生成角度（从顶部开始，顺时针排列）\nangles\n= np.linspace(np.pi /\n2\n, -\n1\n.\n5\n* np.pi, num_vars, endpoint=False)",
+      "language": "python",
+      "confidence": 0.7,
+      "local_path": "runs/demo_real2/articles/python-雷达图-73d98b2b/assets/code/snippet_005.py"
+    },
+    {
+      "snippet_id": "snippet_006",
+      "source": "html_code_block",
+      "text": "fig\n, ax = plt.subplots(figsize=(\n5\n,\n5\n), subplot_kw=dict(polar=True))",
+      "language": "python",
+      "confidence": 0.7,
+      "local_path": "runs/demo_real2/articles/python-雷达图-73d98b2b/assets/code/snippet_006.py"
+    },
+    {
+      "snippet_id": "snippet_007",
+      "source": "html_code_block",
+      "text": "angles\n= np.linspace(np.pi /\n2\n, -\n1\n.\n5\n* np.pi, num_vars, endpoint=False)",
+      "language": "python",
+      "confidence": 0.7,
+      "local_path": "runs/demo_real2/articles/python-雷达图-73d98b2b/assets/code/snippet_007.py"
+    },
+    {
+      "snippet_id": "snippet_008",
+      "source": "html_code_block",
+      "text": "# 绘制参考圆圈\nbase_radius =\n20\ncircle = plt.Circle(\n(\n0\n,\n0\n), base_radius, transform=ax.transData._b,\nfacecolor=\n'white'\n, edgecolor=\n'black'\n, linestyle=\n'--'\n,\nlinewidth=\n1\n, alpha=\n1.0\n, zorder=\n1\n)\nax.add_patch(circle)\ntwenty_percent_radius =\n40\ntwenty_percent_circle = plt.Circle(\n(\n0\n,\n0\n), twenty_percent_radius, transform=ax.transData._b,\nfacecolor=\n'none'\n, edgecolor=\n'black'\n, linestyle=\n'--'\n,\nlinewidth=\n1\n, alpha=\n1.0\n, zorder=\n1\n)\nax.add_patch(twenty_percent_circle)\nmax_radius_for_lines =\n120\ntheta = np.linspace(\n0\n,\n2\n* np.pi,\n100\n)\nax.plot(theta, [max_radius_for_lines] * len(theta),\ncolor=\n'black'\n, linewidth=\n1.5\n, zorder=\n1\n)\n# 绘制径向线\nfor\nangle\nin\nangles:\nax.plot(\n[\nangle, angle\n],\n[\nbase_radius, max_radius_for_lines\n],\ncolor=\n'lightgray'\n,\nlinestyle=\n'--'\n,\nlinewidth=\n0.8\n,\nzorder=\n0\n)",
+      "language": "python",
+      "confidence": 0.7,
+      "local_path": "runs/demo_real2/articles/python-雷达图-73d98b2b/assets/code/snippet_008.py"
+    },
+    {
+      "snippet_id": "snippet_009",
+      "source": "html_code_block",
+      "text": "circle = plt.Circle(",
+      "language": "python",
+      "confidence": 0.7,
+      "local_path": "runs/demo_real2/articles/python-雷达图-73d98b2b/assets/code/snippet_009.py"
+    },
+    {
+      "snippet_id": "snippet_010",
+      "source": "html_code_block",
+      "text": "(\n0\n,\n0\n), base_radius, transform=ax.transData._b,",
+      "language": "python",
+      "confidence": 0.7,
+      "local_path": "runs/demo_real2/articles/python-雷达图-73d98b2b/assets/code/snippet_010.py"
+    },
+    {
+      "snippet_id": "snippet_011",
+      "source": "html_code_block",
+      "text": "ax.add_patch(circle)",
+      "language": "python",
+      "confidence": 0.7,
+      "local_path": "runs/demo_real2/articles/python-雷达图-73d98b2b/assets/code/snippet_011.py"
+    },
+    {
+      "snippet_id": "snippet_012",
+      "source": "html_code_block",
+      "text": "twenty_percent_circle = plt.Circle(",
+      "language": "python",
+      "confidence": 0.7,
+      "local_path": "runs/demo_real2/articles/python-雷达图-73d98b2b/assets/code/snippet_012.py"
+    },
+    {
+      "snippet_id": "snippet_013",
+      "source": "html_code_block",
+      "text": "(\n0\n,\n0\n), twenty_percent_radius, transform=ax.transData._b,",
+      "language": "python",
+      "confidence": 0.7,
+      "local_path": "runs/demo_real2/articles/python-雷达图-73d98b2b/assets/code/snippet_013.py"
+    },
+    {
+      "snippet_id": "snippet_014",
+      "source": "html_code_block",
+      "text": "ax.add_patch(twenty_percent_circle)",
+      "language": "python",
+      "confidence": 0.7,
+      "local_path": "runs/demo_real2/articles/python-雷达图-73d98b2b/assets/code/snippet_014.py"
+    },
+    {
+      "snippet_id": "snippet_015",
+      "source": "html_code_block",
+      "text": "theta = np.linspace(\n0\n,\n2\n* np.pi,\n100\n)",
+      "language": "python",
+      "confidence": 0.7,
+      "local_path": "runs/demo_real2/articles/python-雷达图-73d98b2b/assets/code/snippet_015.py"
+    },
+    {
+      "snippet_id": "snippet_016",
+      "source": "html_code_block",
+      "text": "ax.plot(theta, [max_radius_for_lines] * len(theta),",
+      "language": "python",
+      "confidence": 0.7,
+      "local_path": "runs/demo_real2/articles/python-雷达图-73d98b2b/assets/code/snippet_016.py"
+    },
+    {
+      "snippet_id": "snippet_017",
+      "source": "html_code_block",
+      "text": "for\nname in group_names:\ndata\n= data_sets[name]\ncolor\n= current_colors[name]\n# 计算数据点半径\nline_radii\n=\n[base_radius + value for value in data]\nclosed_angles\n= np.append(angles, angles[\n0\n])\nclosed_radii\n= np.append(line_radii, line_radii[\n0\n])\n# 绘制线条和填充区域\nax\n.plot(closed_angles, closed_radii, color=color, linewidth=\n1\n, zorder=\n2\n)\nax\n.fill(closed_radii, closed_angles, color=color, alpha=\n0\n.\n15\n, zorder=\n1\n)\nax\n.scatter(angles, line_radii, color=color, s=\n50\n, zorder=\n3\n)",
+      "language": "python",
+      "confidence": 0.7,
+      "local_path": "runs/demo_real2/articles/python-雷达图-73d98b2b/assets/code/snippet_017.py"
+    },
+    {
+      "snippet_id": "snippet_018",
+      "source": "html_code_block",
+      "text": "closed_angles\n= np.append(angles, angles[\n0\n])",
+      "language": "python",
+      "confidence": 0.7,
+      "local_path": "runs/demo_real2/articles/python-雷达图-73d98b2b/assets/code/snippet_018.py"
+    },
+    {
+      "snippet_id": "snippet_019",
+      "source": "html_code_block",
+      "text": "closed_radii\n= np.append(line_radii, line_radii[\n0\n])",
+      "language": "python",
+      "confidence": 0.7,
+      "local_path": "runs/demo_real2/articles/python-雷达图-73d98b2b/assets/code/snippet_019.py"
+    },
+    {
+      "snippet_id": "snippet_020",
+      "source": "html_code_block",
+      "text": "label_radius_category\n=\n130\nfor\ni, (angle, label) in enumerate(zip(angles, categories)):\nangle_deg\n= (np.rad2deg(angle) +\n360\n) %\n360\nrotation\n= angle_deg\nif\n0\n< angle_deg <=\n180\n:\nrotation\n-=\n90\nif\n180\n< angle_deg <\n360\n:\nrotation\n+=\n90\nax\n.text(\nangle\n, label_radius_category, label,\nha\n='center', va='center', fontsize=\n12\n,\nfontfamily\n='Times New Roman', rotation=rotation,\nweight\n='bold', color='black')",
+      "language": "python",
+      "confidence": 0.7,
+      "local_path": "runs/demo_real2/articles/python-雷达图-73d98b2b/assets/code/snippet_020.py"
+    },
+    {
+      "snippet_id": "snippet_021",
+      "source": "html_code_block",
+      "text": "angle_deg\n= (np.rad2deg(angle) +\n360\n) %\n360",
+      "language": "python",
+      "confidence": 0.7,
+      "local_path": "runs/demo_real2/articles/python-雷达图-73d98b2b/assets/code/snippet_021.py"
+    },
+    {
+      "snippet_id": "snippet_022",
+      "source": "html_code_block",
+      "text": "# 隐藏极坐标轴线和网格\nax.set_ylim(\n0\n,\n140\n)\nax.spines[\n'polar'\n].set_visible(\nFalse\n)\nax.grid(\nFalse\n)\nax.set_yticklabels([])\nax.set_xticks([])\n# 生成图例\ngroup_patches = [mpatches.Patch(color=current_colors[name], alpha=\n0.6\n, label=name)\nfor\nname\nin\ngroup_names]\nncols_group =\nmin\n(\n3\n,\nlen\n(group_names))\n# 放置图例\nfig.legend(\nhandles=group_patches,\nloc=\n'lower center'\n, bbox_to_anchor=(\n0.5\n,\n0.015\n),\nframeon=\nFalse\n, ncol=ncols_group,\nprop={\n'family'\n:\n'Times New Roman'\n,\n'weight'\n:\n'bold'\n,\n'size'\n:\n12\n}\n)\n# 调整画布边距，保存图片\nplt.subplots_adjust(left=\n0.05\n, right=\n0.95\n, top=\n0.9\n, bottom=\n0.15\n)\nplt.savefig(\n'1.png'\n, dpi=\n600\n)\nplt.show()",
+      "language": "python",
+      "confidence": 0.7,
+      "local_path": "runs/demo_real2/articles/python-雷达图-73d98b2b/assets/code/snippet_022.py"
+    },
+    {
+      "snippet_id": "snippet_023",
+      "source": "html_code_block",
+      "text": "ax.set_ylim(\n0\n,\n140\n)",
+      "language": "python",
+      "confidence": 0.7,
+      "local_path": "runs/demo_real2/articles/python-雷达图-73d98b2b/assets/code/snippet_023.py"
+    },
+    {
+      "snippet_id": "snippet_024",
+      "source": "html_code_block",
+      "text": "ax.spines[\n'polar'\n].set_visible(\nFalse\n)",
+      "language": "python",
+      "confidence": 0.7,
+      "local_path": "runs/demo_real2/articles/python-雷达图-73d98b2b/assets/code/snippet_024.py"
+    },
+    {
+      "snippet_id": "snippet_025",
+      "source": "html_code_block",
+      "text": "ax.set_yticklabels([])",
+      "language": "python",
+      "confidence": 0.7,
+      "local_path": "runs/demo_real2/articles/python-雷达图-73d98b2b/assets/code/snippet_025.py"
+    },
+    {
+      "snippet_id": "snippet_026",
+      "source": "html_code_block",
+      "text": "plt.subplots_adjust(left=\n0.05\n, right=\n0.95\n, top=\n0.9\n, bottom=\n0.15\n)",
+      "language": "python",
+      "confidence": 0.7,
+      "local_path": "runs/demo_real2/articles/python-雷达图-73d98b2b/assets/code/snippet_026.py"
+    },
+    {
+      "snippet_id": "snippet_027",
+      "source": "html_code_block",
+      "text": "plt.savefig(\n'1.png'\n, dpi=\n600\n)",
+      "language": "python",
+      "confidence": 0.7,
+      "local_path": "runs/demo_real2/articles/python-雷达图-73d98b2b/assets/code/snippet_027.py"
+    },
+    {
+      "snippet_id": "snippet_028",
+      "source": "text_heuristic",
+      "text": "ax.set_yticklabels([])\nax.set_xticks([])",
+      "language": "python",
+      "confidence": 0.7,
+      "local_path": "runs/demo_real2/articles/python-雷达图-73d98b2b/assets/code/snippet_028.py"
+    }
+  ],
+  "style_profile": {
+    "plot_types": [
+      "line",
+      "bar",
+      "scatter",
+      "multi_panel"
+    ],
+    "libraries_detected": [
+      "matplotlib",
+      "pandas",
+      "numpy"
+    ],
+    "palette_hex": [
+      "#A3969F",
+      "#EFDFE7",
+      "#EFF7FB",
+      "#D2D8E4",
+      "#FBEEEF",
+      "#E7EEF4"
+    ],
+    "layout_pattern": "multi_panel",
+    "annotation_style": "heavy",
+    "typography": "serif",
+    "confidence": 0.95,
+    "recommended_template": "multi_panel",
+    "manual_review_required": false,
+    "notes": []
+  },
+  "errors": []
+}
