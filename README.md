@@ -1,5 +1,7 @@
 # PlotWeaver SkillKit
 
+[English](README.en.md)
+
 <p align="center">
   <img src="docs/assets/hero.svg" alt="PlotWeaver SkillKit hero banner" width="100%">
 </p>
@@ -13,96 +15,96 @@
   <a href="https://github.com/handsomeZR-netizen/plotweaver-skillkit/stargazers"><img src="https://img.shields.io/github/stars/handsomeZR-netizen/plotweaver-skillkit?style=flat-square" alt="GitHub stars"></a>
 </p>
 
-> A Codex-ready skill + toolkit for turning WeChat article plots into reusable paper-figure style assets.
->
 > 面向 Codex 的公众号绘图风格提取与论文复用工具链。
+>
+> A Codex-ready skill + toolkit for turning WeChat article plots into reusable paper-figure style assets.
 
-`PlotWeaver SkillKit` packages two things into one repository:
+`PlotWeaver SkillKit` 把两类能力打包进了同一个仓库：
 
-- a `wechat-plotkit` Python toolkit that fetches article content, extracts plotting cues, builds style indexes, and validates capture quality
-- a pair of Codex skills that turn raw article links into reusable assets, then turn those assets into starter plotting code for downstream paper projects
+- 一个 `wechat-plotkit` Python 工具包，负责抓取文章内容、抽取绘图信号、构建风格索引，并做浏览器校验
+- 两个面向 Codex 的 repo-local skills，负责把原始公众号链接变成可复用风格资产，再把这些资产变成下游论文项目可直接接手的 starter plotting code
 
-This repository is designed for a very specific workflow: build a style pack once, then let Codex read that pack together with project B and reuse the visual language with much less prompt friction and much higher consistency.
+这个仓库不是为了“一次性抓完一批文章”而设计的，而是为了构建一套可持续复用的 style pack。你可以先分析一批公众号绘图文章，再让 Codex 在项目 B 里同时读取这份风格包和项目代码，从而更稳定地复用配色、布局、注释密度和整体图形语言。
 
-## Why PlotWeaver
+## 这个仓库解决什么问题
 
-Most alternatives stop at one of these layers:
+市面上很多相近方案通常只做到其中一层：
 
-- a crawler that saves article HTML but does not surface plot style decisions
-- a screenshot scrapbook that shows inspiration but does not produce reusable code paths
-- a one-shot prompt workflow that can imitate a look once, but cannot keep a stable style memory across projects
+- 只做爬取，保存 HTML 和图片，但不显式总结绘图风格决策
+- 只做截图收藏，能看灵感，但不能转成稳定的复用代码路径
+- 只靠一次 prompt 模仿风格，能临时出图，但很难跨项目保持一致的风格记忆
 
-`PlotWeaver SkillKit` focuses on the handoff layer between inspiration and implementation.
+`PlotWeaver SkillKit` 重点做的是“从灵感到复用”的交接层。
 
-- `Signal Harvester`: fetch article HTML, images, text, high-confidence code snippets, and OCR fallbacks
-- `Style Loom`: distill each article into `style_profile.json`, then aggregate a batch into `master_style_index.json`, `template_registry.json`, and `reuse_playbook.md`
-- `Proof Capture`: sample browser screenshots and generate missing reports so extraction quality is not a blind guess
-- `Project-B Handoff`: generate starter plotting scripts and explicit reuse rules that Codex can apply inside a downstream paper repository
+- `Signal Harvester`：抓取 HTML、正文、图片、高置信代码片段，以及 OCR 回退候选
+- `Style Loom`：把每篇文章沉淀为 `style_profile.json`，再把整批文章汇总为 `master_style_index.json`、`template_registry.json` 和 `reuse_playbook.md`
+- `Proof Capture`：用浏览器抽样截图和缺失报告去验证抽取结果，而不是盲信抓取
+- `Project-B Handoff`：生成 starter plotting script 和明确的复用规则，方便 Codex 在下游论文项目里直接接手
 
-## What Makes It Different
+## 和同类方案的差异点
 
-| Typical approach | PlotWeaver SkillKit |
+| 常见做法 | PlotWeaver SkillKit |
 | --- | --- |
-| Saves pages and images | Builds a reusable style dataset with explicit plot types, palettes, confidence, layout patterns, and template suggestions |
-| Relies on raw snippets | Separates trusted code, OCR hints, and manual-review paths so low-confidence extraction does not silently become production code |
-| Good for one batch | Designed to become a portable style pack that can be dropped into project B and read by Codex later |
-| Focuses on scraping | Focuses on reuse: template registry, starter code generation, theme entrypoint, and downstream playbook |
-| Trusts extraction blindly | Adds browser-backed validation and missing reports to surface gaps before reuse |
+| 只保存页面和图片 | 直接产出可复用的风格数据集，包含 plot types、palette、confidence、layout pattern 和模板建议 |
+| 直接相信抓到的代码片段 | 区分高置信代码、OCR 提示和人工复核路径，避免低质量抽取直接进入生产图 |
+| 只适合单次批处理 | 目标是形成一个可移植的 style pack，后续可以放进项目 B 继续复用 |
+| 重心在爬取 | 重心在复用，提供 template registry、starter code generation、theme entrypoint 和 reuse playbook |
+| 没有校验层 | 加入浏览器抽样验证和 missing report，能更早暴露漏抓与抽取缺口 |
 
-## Core Outputs
+## 核心产物
 
-Every successful analysis run produces a compact contract that Codex can consume:
+每次成功分析都会生成一套稳定的产物契约，方便 Codex 和下游项目直接读取：
 
-- `batch_manifest.json`: what was processed, what failed, and what needs review
-- `articles/<slug>/article.json`: article-level extraction snapshot
-- `articles/<slug>/style_profile.json`: article-level style summary
-- `master_style_index.json`: batch-level aggregate of plot families, libraries, palettes, and recommended templates
-- `template_registry.json`: concrete starter template map
-- `reuse_playbook.md`: downstream rules for reuse in project B
-- `validation/validation_manifest.json`: browser validation records when capture checks are enabled
+- `batch_manifest.json`：本批次处理了什么、失败了什么、哪些需要人工复核
+- `articles/<slug>/article.json`：文章级抽取快照
+- `articles/<slug>/style_profile.json`：文章级风格总结
+- `master_style_index.json`：批次级 plot family、library、palette 和推荐模板汇总
+- `template_registry.json`：模板映射注册表
+- `reuse_playbook.md`：项目 B 里的复用规则说明
+- `validation/validation_manifest.json`：启用浏览器校验时生成的验证记录
 
-## Quick Start
+## 快速开始
 
-### 1. Install
+### 1. 安装
 
 ```powershell
 python -m pip install -e .[dev,style]
 python -m playwright install chromium
 ```
 
-Optional OCR support:
+如果你本地还准备启用 OCR：
 
 ```powershell
 python -m pip install -e .[ocr]
 ```
 
-### 2. Analyze a Markdown link list
+### 2. 分析 Markdown 链接清单
 
 ```powershell
 wechat-plotkit analyze-links --input .\links.md --out .\runs\demo --validate --sample-mode risk_based --sample-limit 3
 ```
 
-### 3. Rebuild an index or rerun validation
+### 3. 重建索引或重新执行校验
 
 ```powershell
 wechat-plotkit build-style-index --run .\runs\demo
 wechat-plotkit validate-capture --run .\runs\demo --sample-mode manual_only --sample-limit 5
 ```
 
-### 4. Generate a starter plotting script from a style source
+### 4. 从风格源生成 starter plotting script
 
 ```powershell
 wechat-plotkit generate-example --style-source .\examples\demo_pack\master_style_index.json --template scatter --output .\exports
 ```
 
-## Codex Skill Entry Points
+## Codex Skill 入口
 
-The repository also ships two repo-local skills:
+这个仓库同时提供两个 repo-local skills：
 
-- `wechat-analysis`: starts from raw WeChat links and produces a fresh reusable style dataset
-- `plot-style-reuse`: starts from an existing style source and selects or generates the best starter template
+- `wechat-analysis`：从原始公众号链接出发，生成一份新的可复用风格数据集
+- `plot-style-reuse`：从现有 style source 出发，自动选择最合适的 starter template，并生成示例脚本
 
-Example invocations:
+调用示例：
 
 ```powershell
 python .agents/skills/wechat-analysis/scripts/preflight_check.py --input .\links.md --out .\runs\demo --validate
@@ -111,9 +113,9 @@ python .agents/skills/plot-style-reuse/scripts/select_template.py --style-source
 python .agents/skills/plot-style-reuse/scripts/generate_plot_example.py --style-source .\examples\demo_pack\master_style_index.json --output .\exports
 ```
 
-## Curated Demo Pack
+## 精简演示包
 
-The repository includes a lightweight curated example instead of the full local scrape archive:
+为了让公开仓库足够轻量，这里没有直接上传全量本地抓取结果，而是保留了一套可展示数据结构的精简 demo：
 
 - [`examples/demo_pack/master_style_index.json`](examples/demo_pack/master_style_index.json)
 - [`examples/demo_pack/template_registry.json`](examples/demo_pack/template_registry.json)
@@ -121,15 +123,15 @@ The repository includes a lightweight curated example instead of the full local 
 - [`examples/demo_pack/style_profile_radar.json`](examples/demo_pack/style_profile_radar.json)
 - [`examples/demo_pack/article_radar.json`](examples/demo_pack/article_radar.json)
 
-This keeps the public repository small while still showing the exact artifact shapes that downstream projects and Codex will consume.
+这套 demo 足够展示下游项目和 Codex 真正会消费的文件形状，同时避免公开仓库过大。
 
-## Preview
+## 预览
 
 ![Annotated template preview](docs/assets/annotated-template.png)
 
-## Project B Integration
+## 如何接入项目 B
 
-Recommended downstream layout:
+推荐的下游目录结构：
 
 ```text
 project-b/
@@ -139,34 +141,34 @@ project-b/
   data/
 ```
 
-Recommended Codex read order:
+推荐的 Codex 读取顺序：
 
 1. `master_style_index.json`
 2. `template_registry.json`
 3. `reuse_playbook.md`
-4. matched `article.json` or `style_profile.json`
+4. 与目标图最接近的 `article.json` 或 `style_profile.json`
 5. `style_kit/theme.py`
 
-## Repository Layout
+## 仓库结构
 
 ```text
-.agents/                 Codex skills and wrapper scripts
-docs/                    Usage notes, integration guidance, visual assets
-examples/demo_pack/      Lightweight public example artifacts
-style_kit/               Theme entrypoint and palette assets
-templates/               Starter plotting templates
-tests/                   Package and skill workflow tests
-wechat_plotkit/          Core toolkit package
+.agents/                 Codex skills 和 wrapper scripts
+docs/                    使用说明、集成文档、展示素材
+examples/demo_pack/      轻量级公开演示产物
+style_kit/               主题入口和调色板资产
+templates/               starter plotting templates
+tests/                   包级测试和 skill workflow 测试
+wechat_plotkit/          核心工具包
 ```
 
-## Limitations
+## 边界与限制
 
-- WeChat pages can change structure or add anti-bot friction; extraction should be treated as a best-effort pipeline, not a legal archive guarantee.
-- OCR snippets are hints, not final trusted plotting code.
-- Public repositories should avoid pushing full raw scrape archives when size or copyright boundaries are unclear.
+- 微信公众号页面结构可能变化，也可能出现额外反爬限制，所以这套流程应该被视为 best-effort extraction，而不是法律意义上的归档器
+- OCR 片段只是提示，不应该被直接当作最终可信绘图代码
+- 如果版权边界或仓库体积不清晰，不建议把完整原始抓取全集直接公开上传
 
-## Positioning
+## 一句话定位
 
-If you need a short description for talks, docs, or the GitHub About panel:
+如果你要把这个项目写进 GitHub About、演示文档或者对外介绍，可以直接用这句：
 
-> PlotWeaver SkillKit is a Codex-ready system for harvesting plotting signals from WeChat articles, distilling them into reusable style assets, and replaying those styles inside downstream paper projects.
+> PlotWeaver SkillKit 是一套面向 Codex 的风格资产化系统，用来从公众号绘图文章中提取 plotting signals，把它们沉淀为可复用的 style pack，并在下游论文项目中重放这些风格。
