@@ -49,17 +49,31 @@ Most alternatives stop at one of these layers:
 | Focuses on scraping | Focuses on reuse: template registry, starter code generation, theme entrypoint, and downstream playbook |
 | Trusts extraction blindly | Adds browser-backed validation and missing reports to surface gaps before reuse |
 
-## Core Outputs
+## What You Actually Get
 
-Every successful analysis run produces a compact contract that Codex can consume:
+`PlotWeaver SkillKit` does not stop at downloaded article content. It gives you a reusable style asset layer that can keep working across projects:
 
-- `batch_manifest.json`: what was processed, what failed, and what needs review
-- `articles/<slug>/article.json`: article-level extraction snapshot
-- `articles/<slug>/style_profile.json`: article-level style summary
-- `master_style_index.json`: batch-level aggregate of plot families, libraries, palettes, and recommended templates
-- `template_registry.json`: concrete starter template map
-- `reuse_playbook.md`: downstream rules for reuse in project B
-- `validation/validation_manifest.json`: browser validation records when capture checks are enabled
+- `master_style_index.json`: a batch-level style map that turns many inspirations into one reusable reference point
+- `style_profile.json`: article-level summaries for palette, layout, annotation density, and plot family
+- `template_registry.json`: an explicit bridge from extracted style signals to starter plotting templates
+- `reuse_playbook.md`: practical reuse guidance that Codex can follow inside a downstream project
+- starter plotting scripts: runnable code seeds that convert inspiration into action quickly
+
+In other words, the output is not just a scrape. It is a reusable memory of style.
+
+## Who This Is For
+
+- researchers who want a stable Codex-assisted plotting workflow
+- users who regularly study WeChat plotting articles and want to operationalize the inspiration
+- teams that want to carry a visual language from one paper project to the next
+- skill builders who want a stronger plotting foundation than one-off prompts
+
+## Typical Use Cases
+
+- turn a batch of WeChat plotting articles into a private style pack
+- drop that style pack into a new paper project and let Codex reuse the same visual language
+- choose the closest starter template for a new figure automatically
+- build a long-lived plotting reference base for a broader skill ecosystem
 
 ## Quick Start
 
@@ -113,7 +127,7 @@ python .agents/skills/plot-style-reuse/scripts/generate_plot_example.py --style-
 
 ## Curated Demo Pack
 
-The repository includes a lightweight curated example instead of the full local scrape archive:
+The repository includes a lightweight demo pack that is ready for exploration and showcase use:
 
 - [`examples/demo_pack/master_style_index.json`](examples/demo_pack/master_style_index.json)
 - [`examples/demo_pack/template_registry.json`](examples/demo_pack/template_registry.json)
@@ -121,13 +135,13 @@ The repository includes a lightweight curated example instead of the full local 
 - [`examples/demo_pack/style_profile_radar.json`](examples/demo_pack/style_profile_radar.json)
 - [`examples/demo_pack/article_radar.json`](examples/demo_pack/article_radar.json)
 
-This keeps the public repository small while still showing the exact artifact shapes that downstream projects and Codex will consume.
+It keeps the public repository lightweight while still showing the exact artifact shapes that Codex and downstream projects will use.
 
 ## Preview
 
 ![Annotated template preview](docs/assets/annotated-template.png)
 
-## Project B Integration
+## How To Plug It Into Your Project
 
 Recommended downstream layout:
 
@@ -159,14 +173,13 @@ tests/                   Package and skill workflow tests
 wechat_plotkit/          Core toolkit package
 ```
 
-## Limitations
+## Why It Belongs In Your Skill Stack
 
-- WeChat pages can change structure or add anti-bot friction; extraction should be treated as a best-effort pipeline, not a legal archive guarantee.
-- OCR snippets are hints, not final trusted plotting code.
-- Public repositories should avoid pushing full raw scrape archives when size or copyright boundaries are unclear.
+- it combines `Skill + Toolkit + Template + Style Pack` instead of shipping just one script
+- it is designed to compound value over time as your style assets grow
+- it helps Codex do more than imitate a look once; it helps Codex keep that look across projects
+- it works well as a foundation repository for a larger scientific plotting workflow
 
-## Positioning
+## Tagline
 
-If you need a short description for talks, docs, or the GitHub About panel:
-
-> PlotWeaver SkillKit is a Codex-ready system for harvesting plotting signals from WeChat articles, distilling them into reusable style assets, and replaying those styles inside downstream paper projects.
+> PlotWeaver SkillKit turns plotting inspiration from WeChat articles into long-lived style assets you can keep reusing.

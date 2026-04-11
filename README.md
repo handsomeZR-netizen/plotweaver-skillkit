@@ -51,17 +51,31 @@
 | 重心在爬取 | 重心在复用，提供 template registry、starter code generation、theme entrypoint 和 reuse playbook |
 | 没有校验层 | 加入浏览器抽样验证和 missing report，能更早暴露漏抓与抽取缺口 |
 
-## 核心产物
+## 你会得到什么
 
-每次成功分析都会生成一套稳定的产物契约，方便 Codex 和下游项目直接读取：
+使用 `PlotWeaver SkillKit`，你拿到的不只是“抓下来的文章内容”，而是一套真正能继续用下去的风格资产：
 
-- `batch_manifest.json`：本批次处理了什么、失败了什么、哪些需要人工复核
-- `articles/<slug>/article.json`：文章级抽取快照
-- `articles/<slug>/style_profile.json`：文章级风格总结
-- `master_style_index.json`：批次级 plot family、library、palette 和推荐模板汇总
-- `template_registry.json`：模板映射注册表
-- `reuse_playbook.md`：项目 B 里的复用规则说明
-- `validation/validation_manifest.json`：启用浏览器校验时生成的验证记录
+- `master_style_index.json`：把一整批绘图灵感压缩成一份可读、可索引、可搜索的风格地图
+- `style_profile.json`：把单篇文章的配色、布局、注释密度、图形类型单独沉淀下来
+- `template_registry.json`：告诉 Codex 这份风格更适合映射到哪类 starter template
+- `reuse_playbook.md`：把“怎么复用这套风格”写成可直接执行的策略说明
+- starter plotting scripts：把灵感快速落成可运行的示例代码，而不是只停留在截图和观感层面
+
+换句话说，它交付的是一套可以被反复调用的“风格记忆”，而不是一次性的抓取结果。
+
+## 适合谁用
+
+- 想给自己的 Codex 配一套稳定科研绘图工作流的人
+- 经常参考公众号、教程号、科研绘图博主文章的人
+- 需要把灵感快速迁移到论文项目、汇报图表或实验可视化中的人
+- 不想每次都重新解释“我要这个风格、这个配色、这个版式”的人
+
+## 使用场景
+
+- 从一批公众号绘图文章中提取统一风格，做成私有 style pack
+- 把 style pack 放进新的论文项目里，让 Codex 直接沿用已有视觉语言
+- 为不同图型自动挑选更贴近原风格的 starter template
+- 为自己的 skill 生态准备一套长期可复用的科研绘图参考底座
 
 ## 快速开始
 
@@ -115,7 +129,7 @@ python .agents/skills/plot-style-reuse/scripts/generate_plot_example.py --style-
 
 ## 精简演示包
 
-为了让公开仓库足够轻量，这里没有直接上传全量本地抓取结果，而是保留了一套可展示数据结构的精简 demo：
+为了让公开仓库足够轻量，这里保留了一套可以直接拿来体验和展示的精简 demo：
 
 - [`examples/demo_pack/master_style_index.json`](examples/demo_pack/master_style_index.json)
 - [`examples/demo_pack/template_registry.json`](examples/demo_pack/template_registry.json)
@@ -123,13 +137,13 @@ python .agents/skills/plot-style-reuse/scripts/generate_plot_example.py --style-
 - [`examples/demo_pack/style_profile_radar.json`](examples/demo_pack/style_profile_radar.json)
 - [`examples/demo_pack/article_radar.json`](examples/demo_pack/article_radar.json)
 
-这套 demo 足够展示下游项目和 Codex 真正会消费的文件形状，同时避免公开仓库过大。
+这套 demo 足够展示下游项目和 Codex 真正会消费的文件形状，也方便你快速理解这套工具链的最终效果。
 
 ## 预览
 
 ![Annotated template preview](docs/assets/annotated-template.png)
 
-## 如何接入项目 B
+## 如何接入你的项目
 
 推荐的下游目录结构：
 
@@ -161,14 +175,13 @@ tests/                   包级测试和 skill workflow 测试
 wechat_plotkit/          核心工具包
 ```
 
-## 边界与限制
+## 为什么值得放进你的 Skill 工具箱
 
-- 微信公众号页面结构可能变化，也可能出现额外反爬限制，所以这套流程应该被视为 best-effort extraction，而不是法律意义上的归档器
-- OCR 片段只是提示，不应该被直接当作最终可信绘图代码
-- 如果版权边界或仓库体积不清晰，不建议把完整原始抓取全集直接公开上传
+- 它不是单一脚本，而是一套完整的 `Skill + Toolkit + Template + Style Pack` 组合
+- 它不是只给当前批次服务，而是能反复沉淀你的绘图偏好和视觉资产
+- 它不是只负责“看起来像”，而是帮助 Codex 更稳定地“持续做出像”
+- 它非常适合作为你整个科研绘图 skill 体系中的基础设施仓库
 
-## 一句话定位
+## 一句话宣传语
 
-如果你要把这个项目写进 GitHub About、演示文档或者对外介绍，可以直接用这句：
-
-> PlotWeaver SkillKit 是一套面向 Codex 的风格资产化系统，用来从公众号绘图文章中提取 plotting signals，把它们沉淀为可复用的 style pack，并在下游论文项目中重放这些风格。
+> PlotWeaver SkillKit，让公众号里的绘图灵感真正变成你自己的长期风格资产。
