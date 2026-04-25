@@ -1,4 +1,34 @@
-# PlotWeaver SkillKit
+# Plotweaver Skillkit
+
+<!-- PORTFOLIO-SNAPSHOT:START -->
+<p align="left">
+  <img src="https://img.shields.io/badge/category-AI--assisted%20workflow%20tooling-blue" alt="Category" />
+  <img src="https://img.shields.io/badge/status-Public%20portfolio%20artifact-2ea44f" alt="Status" />
+</p>
+
+> Codex-ready skill and Python toolkit for extracting plotting styles from WeChat articles and reusing them in paper figures.
+
+## Project Snapshot
+
+- Category: AI-assisted workflow tooling
+- Stack: Python, academic-figures, codex-skill, data-visualization, matplotlib, python
+- Status: Public portfolio artifact
+
+## What This Demonstrates
+
+- Presents the project with a clear purpose, technology stack, and review path.
+- Shows applied AI workflow design in a concrete product or learning scenario.
+- Keeps implementation details and usage notes close to the code for easier reuse.
+
+## Quick Start
+
+```bash
+python -m pip install -e . && python -m compileall .
+```
+
+<!-- PORTFOLIO-SNAPSHOT:END -->
+
+## Original Documentation
 
 [English](README.en.md)
 
